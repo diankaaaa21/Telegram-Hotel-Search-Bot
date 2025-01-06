@@ -17,8 +17,8 @@ Follow these steps to set up the project:
 
 **1. Clone the repository:**
 
-- git clone https://gitlab.com/your-username/your-project.git
-- cd python_basic_diploma
+- git clone [https://gitlab.com/your-username/your-project.git](https://github.com/diankaaaa21/Telegram-Hotel-Search-Bot.git)
+- cd Telegram-Hotel-Search-Bot
 
 **2. Create and activate a virtual environment (recommended):**
 ```sh

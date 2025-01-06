@@ -16,10 +16,11 @@ What you need to install to run the project:
 Follow these steps to set up the project:
 
 **1. Clone the repository:**
-
+```sh
+bash
 - git clone [https://gitlab.com/your-username/your-project.git](https://github.com/diankaaaa21/Telegram-Hotel-Search-Bot.git)
 - cd Telegram-Hotel-Search-Bot
-
+```
 **2. Create and activate a virtual environment (recommended):**
 ```sh
 bash
@@ -30,15 +31,15 @@ env\Scripts\activate       # For Windows
 **3. Install dependencies:**
 ```sh
 bash
-pip install pyTelegramBotAPI requests
+pip install pyTelegramBotAPI requests dotenv
 ```
 **4. Set up API variables: In the code, specify your Telegram bot token and RapidAPI key:**
 ```sh
 python
 Skopiuj kod
-bot = telebot.TeleBot('5838654687:AAHmGDtKbuulXupRW8zq3sVj-V-qeykaHnI')
+bot = telebot.TeleBot('TELEGRAM_BOT_TOKEN')
 headers = {
-    "x-rapidapi-key": "edac2fa23cmsh5279dfb3bc3a1c7p1034e1jsn9e9ee202dec5",
+    "x-rapidapi-key": "API_KEY",
     "x-rapidapi-host": "tripadvisor-scraper.p.rapidapi.com"
 }
 ```

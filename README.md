@@ -36,7 +36,6 @@ pip install pyTelegramBotAPI requests dotenv
 **4. Set up API variables: In the code, specify your Telegram bot token and RapidAPI key:**
 ```sh
 python
-Skopiuj kod
 bot = telebot.TeleBot('TELEGRAM_BOT_TOKEN')
 headers = {
     "x-rapidapi-key": "API_KEY",

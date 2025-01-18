@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 import os
 import logging
 
+
 logging.basicConfig(filename='bot.log', level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 load_dotenv()
 token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -112,4 +114,9 @@ def log_command(message, command, params=None):
     history_data[chat_id].append({'command': command, 'params': params})
 
 
-bot.polling()
+if __name__ == "__main__":
+    logging.info("Bot is starting.")
+    try:
+        bot.polling()
+    except Exception as e:
+        logging.critical(f"Critical error in polling: {e}")

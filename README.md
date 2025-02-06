@@ -1,50 +1,62 @@
-# Telegram Hotel Finder Bot
+# Telegram Hotel Search Bot
 
-This project is a Telegram bot that helps users find hotels in cities they are interested in. The bot uses the TripAdvisor API to search for hotel information.
+This project is a Telegram bot for hotel search. The bot uses an external API service to retrieve hotel information and stores user queries in a database.
 
-## Getting Started
-These instructions will help you clone the project and run it on your local computer for development and testing.
+## 📌 Features
+- Search for hotels based on specified parameters.
+- Store user query history in a database.
+- Log bot activities for debugging and monitoring.
 
-## Prerequisites
-What you need to install to run the project:
+## 🛠️ Technologies
+- Python
+- `telebot` (pyTelegramBotAPI)
+- `requests`
+- `SQLAlchemy`
+- `dotenv`
 
-- Python 3.x
-- pyTelegramBotAPI
-- requests
+## 📂 Installation and Setup
 
-## Installation
-Follow these steps to set up the project:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/Telegram-Hotel-Search-Bot.git
+   cd Telegram-Hotel-Search-Bot
+   ```
 
-**1. Clone the repository:**
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. Create a `.env` file and add your API keys:
+   ```env
+   TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   API_KEY=your_api_key
+   ```
+
+4. Run the bot:
+   ```sh
+   python Telegram-Hotel-Search-Bot.py
+   ```
+
+## 📖 Project Files
+- `Telegram-Hotel-Search-Bot.py` — main bot script.
+- `database.py` — database settings and models.
+- `.env` — configuration file with tokens (must be created manually).
+- `bot.log` — log file containing bot activity records.
+
+## 🚀 Running the Bot
+After installing dependencies and setting up environment variables, simply run:
 ```sh
-bash
-- git clone [https://gitlab.com/your-username/your-project.git](https://github.com/diankaaaa21/Telegram-Hotel-Search-Bot.git)
-- cd Telegram-Hotel-Search-Bot
+python Telegram-Hotel-Search-Bot.py
 ```
-**2. Create and activate a virtual environment (recommended):**
+
+## 🛠 Development and Testing
+If you want to modify the bot, it's recommended to use `virtualenv`:
 ```sh
-bash
-python -m venv env
-source env/bin/activate    # For Linux/Mac
-env\Scripts\activate       # For Windows
+python -m venv venv
+source venv/bin/activate  # For Windows use venv\Scripts\activate
+pip install -r requirements.txt
 ```
-**3. Install dependencies:**
-```sh
-bash
-pip install pyTelegramBotAPI requests dotenv
-```
-**4. Set up API variables: In the code, specify your Telegram bot token and RapidAPI key:**
-```sh
-python
-bot = telebot.TeleBot('TELEGRAM_BOT_TOKEN')
-headers = {
-    "x-rapidapi-key": "API_KEY",
-    "x-rapidapi-host": "tripadvisor-scraper.p.rapidapi.com"
-}
-```
-## Usage
-**Run the script:**
-```sh
-bash
-python main.py
-```
+
+## 📜 License
+This project is distributed under the MIT License.
